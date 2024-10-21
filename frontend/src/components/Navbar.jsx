@@ -13,14 +13,18 @@ import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
 
 const Navbar = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Container maxW={"1140px"} px={4}>
       <Flex
         h={16}
         alignItems={"center"}
         justifyContent={"space-between"}
-        flexDir={{ base: "column", sm: "row" }}
+        flexDir={{
+          base: "column",
+          sm: "row",
+        }}
       >
         <Text
           fontSize={{ base: "22", sm: "28" }}
@@ -47,5 +51,4 @@ const Navbar = () => {
     </Container>
   );
 };
-
 export default Navbar;

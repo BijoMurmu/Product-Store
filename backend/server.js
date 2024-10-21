@@ -6,7 +6,6 @@ import { connectDB } from "./config/db.js";
 
 import productRoutes from "./routes/product.route.js";
 
-
 dotenv.config();
 
 const app = express();
@@ -23,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
 
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-  })
+  });
 }
 
 app.listen(PORT, () => {

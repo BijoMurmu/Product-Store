@@ -1,12 +1,12 @@
 import {
+  Box,
+  Button,
   Container,
   Heading,
-  useColorModeValue,
-  VStack,
-  Box,
-  useToast,
-  Button,
   Input,
+  useColorModeValue,
+  useToast,
+  VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useProductStore } from "../store/product";
@@ -37,12 +37,12 @@ const CreatePage = () => {
         status: "success",
         isClosable: true,
       });
-      }
-      setNewProduct({ name: "", price: "", image: "" });
+    }
+    setNewProduct({ name: "", price: "", image: "" });
   };
 
   return (
-    <Container maxW={"Container.sm"}>
+    <Container maxW={"container.sm"}>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"2xl"} textAlign={"center"} mb={8}>
           Create New Product
@@ -73,7 +73,6 @@ const CreatePage = () => {
                 setNewProduct({ ...newProduct, price: e.target.value })
               }
             />
-
             <Input
               placeholder="Image URL"
               name="image"
@@ -92,5 +91,4 @@ const CreatePage = () => {
     </Container>
   );
 };
-
 export default CreatePage;
